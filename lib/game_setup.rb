@@ -1,3 +1,4 @@
+
 class Game_Setup
 
   def initialize
@@ -14,6 +15,7 @@ class Game_Setup
     puts 'How many cards should each player be dealt?'
     save_cards_input
   end
+
 
   private
 
