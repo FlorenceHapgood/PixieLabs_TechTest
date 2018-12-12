@@ -6,10 +6,6 @@ class Game_Setup
     @cards_input = 'Num_input'
   end
 
-  def num_cards
-    return 'How many cards should each player be dealt?'
-  end
-
   private
 
   def save_player_input
