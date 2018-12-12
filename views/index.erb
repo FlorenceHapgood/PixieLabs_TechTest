@@ -1,6 +1,15 @@
-Welcome! How many are playing?
+<% flash.keys.each do |type| %>
+  <div data-alert class="flash <%= type %> alert-box radius">
+    <%= flash[type] %>
+  </div>
+<% end %>
 
-<form action="/save_players" method="post">
+
+Welcome! How many are playing?
+How many cards should each player be dealt?
+
+<form action="/save_quantities" method="post">
   <input type="text" name="num_players" >
+  <input type="text" name="num_cards" >
   <input type="submit" value="Submit">
 </form>

@@ -16,4 +16,5 @@ class Game_Setup
     @cards_input = gets.chomp.to_i
   end
 
+
 end
