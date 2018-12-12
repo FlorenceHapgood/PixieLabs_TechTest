@@ -9,7 +9,6 @@
         1,
         null,
         1,
-        1,
         null,
         1,
         null,
@@ -33,7 +32,7 @@
         1,
         1,
         1,
-        null,
+        1,
         null,
         null,
         null
@@ -55,6 +54,40 @@
         null,
         1,
         0,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/Users/lindahapgood/Coding-Projects/PixieLabs_TechTest/spec/dealer_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/Users/lindahapgood/Coding-Projects/PixieLabs_TechTest/lib/dealer.rb": [
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        null,
         null,
         null,
         null,
@@ -93,6 +126,6 @@
         null
       ]
     },
-    "timestamp": 1544640306
+    "timestamp": 1544642664
   }
 }
