@@ -1,6 +1,7 @@
 require 'sinatra/base'
 require './lib/game_setup'
 require 'sinatra/flash'
+require './lib/dealer'
 
 class Poker < Sinatra::Base
 
@@ -25,9 +26,11 @@ class Poker < Sinatra::Base
   end
 
   get'/dealing' do
-    @players = session[:num_players]
-    @cards = session[:num_cards]
-    dealer = Dealer.new
+    players = session[:num_players].to_i
+    cards = session[:num_cards].to_i
+    @dealer = Dealer.new
+    @dealer.deal(players, cards)
+
     erb(:dealing)
   end
 
