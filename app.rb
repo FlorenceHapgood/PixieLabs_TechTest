@@ -1,5 +1,4 @@
 require 'sinatra/base'
-require './lib/game_setup'
 require 'sinatra/flash'
 require './lib/dealer'
 

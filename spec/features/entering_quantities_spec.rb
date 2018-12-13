@@ -6,7 +6,7 @@ feature 'User adds quantities of people and cards for each person' do
     fill_in :num_players, with: '9'
     fill_in :num_cards, with: '5'
     click_button 'Submit'
-    expect(page).to have_content('95')
+    expect(page).to have_content('Outcome')
   end
 
   scenario 'User enters unworkable combination' do

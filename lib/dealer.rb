@@ -18,21 +18,36 @@ class Dealer
          {Hearts: 12}, {Diamonds: 12}, {Spades: 12}, {Clubs: 12},
          {Hearts: 13}, {Diamonds: 13}, {Spades: 13}, {Clubs: 13},]
     @record = []
+    @hand = []
   end
+
 
   def deal(num_players, num_cards)
-    @deck.shuffle #poss refactor?
-
+    shuffle
     players_counter = 0
     while players_counter != num_players
-       hand = []
-       num_cards.times { hand << @deck.sample }
-       #Need to remove the cards....
-       @record << { :"Player number #{ players_counter + 1 }" => hand}
+       @hand = []
+       num_cards.times { get_card }
+       @record << { :"Player number #{ players_counter + 1 }" => @hand} #possibly refactor
        players_counter += 1
     end
-   
   end
 
+
+  private
+
+  def shuffle
+    @deck.shuffle
+  end
+
+  def get_card
+    card = @deck.sample
+    delete_card(card)
+    @hand << card
+  end
+
+  def delete_card(card)
+    @deck.delete(card)
+  end
 
 end
