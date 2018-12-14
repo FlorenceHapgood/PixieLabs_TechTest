@@ -6,29 +6,24 @@ class Calculator
 
   def find_winner(record)
     adding(record)
-    top_score = 0
-    winner = ""
     @winner = @totals.max_by{
-      |key, value| value
+      |player, total_score| total_score
     }
     return @winner[0]
   end
 
   def adding(record)
-    @totals = {}
     record.each { |record_hash|
-    record_hash.each {| player_key, array_values|
-
-    player_total = 0
-    array_values.each {|hash|
-    hash.each {|key, value|
-    player_total += value }
-  }
-  @totals["#{player_key}"] = player_total
-
-}
-}
-return @totals
-end
+      record_hash.each {| player, hand|
+        player_total = 0
+        hand.each {|card|
+          card.each {|suit, number|
+            player_total += number
+          }
+        }
+        @totals["#{player}"] = player_total
+      }
+    }
+  end
 
 end

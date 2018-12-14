@@ -1,6 +1,7 @@
 require 'sinatra/base'
 require 'sinatra/flash'
 require './lib/dealer'
+require './lib/calculator'
 
 class Poker < Sinatra::Base
 
@@ -30,9 +31,10 @@ class Poker < Sinatra::Base
     @dealer = Dealer.new
     @dealer.deal(players, cards)
 
+
+    calculator = Calculator.new
+    @winner = calculator.find_winner(@dealer.record)
     erb(:dealing)
-    # calculator = Calculator.new
-    # calculator.find_winner(@dealer.record)
   end
 
 end

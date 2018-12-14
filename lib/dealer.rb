@@ -16,7 +16,7 @@ class Dealer
          {Hearts: 10}, {Diamonds: 10}, {Spades: 10}, {Clubs: 10},
          {Hearts: 11}, {Diamonds: 11}, {Spades: 11}, {Clubs: 11},
          {Hearts: 12}, {Diamonds: 12}, {Spades: 12}, {Clubs: 12},
-         {Hearts: 13}, {Diamonds: 13}, {Spades: 13}, {Clubs: 13},]
+         {Hearts: 13}, {Diamonds: 13}, {Spades: 13}, {Clubs: 13}]
     @record = []
     @hand = []
   end

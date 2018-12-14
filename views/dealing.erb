@@ -1,13 +1,14 @@
 <h1> Outcome </h1>
 
 <% @dealer.record.each { |record_hash| %>
-<% record_hash.each {| player_key, array_values| %>
-<%= player_key %> :
-<% array_values.each {|hash| %>
-<%  hash.each {|key, value| %>
-<%= value %> of <%= key  %> ,
+  <% record_hash.each {| player, hand| %>
+    <%= player %> :
+    <% hand.each {|card| %>
+      <%  card.each {|suit, number| %>
+      <%= number %> of <%= suit  %> ,
+      <% } %>
+    <%    } %> <br>
+  <% } %>
+<% } %>
 
-<% } %>
-<%    } %> <br>
-<% } %>
-<% } %>
+And the winner is: <%= @winner %>
