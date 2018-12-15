@@ -5,6 +5,7 @@ require 'sinatra/flash'
 require './lib/dealer'
 require './lib/calculator'
 
+# This is the controller.
 class Poker < Sinatra::Base
   enable :sessions
 
@@ -31,8 +32,7 @@ class Poker < Sinatra::Base
     @dealer = Dealer.new
     @dealer.deal(players, cards)
     calculator = Calculator.new
-    @winners = calculator.find_winners(@dealer.record)
-    @statement = calculator.winner_or_winners(@winners)
+    @statement = calculator.find_winners(@dealer.record)
     erb(:dealing)
   end
 end
