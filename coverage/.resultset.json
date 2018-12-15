@@ -101,7 +101,7 @@
         1,
         null,
         1,
-        5,
+        6,
         null,
         null,
         1,
@@ -114,8 +114,8 @@
         null,
         null,
         1,
+        4,
         3,
-        2,
         null,
         1,
         null,
@@ -151,7 +151,7 @@
         null,
         1,
         null,
-        4,
+        5,
         null,
         1,
         1,
@@ -190,10 +190,12 @@
         null,
         1,
         1,
-        null,
         1,
         1,
         null,
+        1,
+        1,
+        1,
         null,
         null,
         null
@@ -240,6 +242,7 @@
         1,
         1,
         null,
+        null,
         null
       ],
       "/Users/lindahapgood/Coding-Projects/PixieLabs_TechTest/spec/features/entering_quantities_spec.rb": [
@@ -257,6 +260,6 @@
         null
       ]
     },
-    "timestamp": 1544883630
+    "timestamp": 1544884898
   }
 }

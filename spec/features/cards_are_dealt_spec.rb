@@ -14,7 +14,7 @@ feature 'User sees how the cards were dealt' do
     expect(page).not_to have_content('Player number 100')
   end
 
-  scenario 'User sees who won' do
+  scenario 'User sees who won in the case of a single winner' do
     visit '/'
     fill_in :num_players, with: '3'
     fill_in :num_cards, with: '2'
@@ -22,4 +22,5 @@ feature 'User sees how the cards were dealt' do
     click_button 'Submit'
     expect(page).to have_content("And the winner is: Player number 1")
   end
+
 end

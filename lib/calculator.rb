@@ -2,6 +2,7 @@ class Calculator
 
  def initialize
    @totals = {}
+   @winning_score = 0
  end
 
   def find_winners(record) #refactor
@@ -15,9 +16,9 @@ class Calculator
 
   def winner_or_winners(result)
     if result.length == 1
-      "And the winner is:"
+      "And the winner is: " + result.join
     else
-      "And the winners are:"
+      "And the winners are: " + result.join(', ')
     end
   end
 
