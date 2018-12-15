@@ -4,12 +4,12 @@ describe Dealer do
 
   let(:dealer) { described_class.new }
 
-
-#we only need to test that it creates records well, not how
   describe "#deal" do
     it "#deals the cards" do
-      dealer.deal(1, 1)
-      expect(dealer.record).not_to eq([{}]) #length to be 4,
+      srand(100)
+      dealer.deal(2, 2)
+      expect(dealer.record).to eq([{:"Player number 1"=>[{:Hearts=>13},
+        {:Clubs=>12}]}, {:"Player number 2"=>[{:Clubs=>10}, {:Spades=>12}]}])
     end
   end
 end

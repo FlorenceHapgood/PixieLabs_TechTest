@@ -33,7 +33,6 @@ class Dealer
     end
   end
 
-
   private
 
   def shuffle
