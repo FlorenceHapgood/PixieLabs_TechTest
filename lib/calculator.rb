@@ -5,7 +5,7 @@ class Calculator
    @winning_score = 0
  end
 
-  def find_winners(record) #refactor
+  def find_winners(record) 
     adding_scores(record)
     find_top_score
     winners = []

@@ -42,11 +42,14 @@ describe Calculator do
   describe "#winner_or_winners" do
     it "returns a plural statement for multiple winners" do
       result = ["Player number 2", "Player number 3"]
-      expect(calculator.winner_or_winners(result)).to eq("And the winners are: Player number 2, Player number 3")
+      expect(calculator.winner_or_winners(result)).to eq("And the winners are:"\
+                                                        " Player number 2, "\
+                                                        "Player number 3")
     end
     it "returns a singular statement for one winner" do
       result = ["Player number 1"]
-      expect(calculator.winner_or_winners(result)).to eq("And the winner is: Player number 1")
+      expect(calculator.winner_or_winners(result)).to eq("And the winner is:"\
+                                                        " Player number 1")
     end
   end
 end
