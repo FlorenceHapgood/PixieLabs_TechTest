@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require './app'
 
 feature 'User adds quantities of people and cards for each person' do
@@ -7,6 +9,6 @@ feature 'User adds quantities of people and cards for each person' do
     fill_in :num_cards, with: '7'
     click_button 'Submit'
     expect(page).to have_content("Those numbers don't work, please rethink"\
-                                  " your quantities")
+                                  ' your quantities')
   end
 end
