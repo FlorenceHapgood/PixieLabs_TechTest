@@ -23,6 +23,10 @@ class Poker < Sinatra::Base
   get '/dealing' do
     @dealer = Dealer.new
     @dealer.deal(session[:num_players], session[:num_cards])
+
+    # Passes the record of scores created from the dealer class
+    # to the calculator class, to return a statement about
+    # the winner(s).
     calculator = Calculator.new
     @statement = calculator.find_winners(@dealer.record)
     erb(:dealing)
