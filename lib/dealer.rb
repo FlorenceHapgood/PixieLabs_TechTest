@@ -24,9 +24,9 @@ class Dealer
   def deal(num_players, num_cards)
     shuffle
     players_counter = 0
-    while players_counter != num_players
+    while players_counter != num_players.to_i
       @hand = []
-      num_cards.times { get_card }
+      num_cards.to_i.times { get_card }
       @record << { :"Player number #{ players_counter + 1 }" => @hand } # possibly refactor
       players_counter += 1
     end
