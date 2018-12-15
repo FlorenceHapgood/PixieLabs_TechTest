@@ -5,11 +5,12 @@
 <% end %>
 
 
-Welcome! How many are playing?
-How many cards should each player be dealt?
+Welcome! <br>
 
 <form action='/save_quantities' method='post'>
-  <input type='text' name='num_players' >
+  How many are playing?
+  <input type='text' name='num_players' > <br>
+  How many cards should each player be dealt?
   <input type='text' name='num_cards' >
   <input type='submit' value='Submit'>
 </form>

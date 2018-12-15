@@ -5,10 +5,15 @@
     <%= player %> :
     <% hand.each {|card| %>
       <%  card.each {|suit, number| %>
-      <%= number %> of <%= suit  %> ,
+      <%= number %> of <%= suit  %> ||
       <% } %>
     <%    } %> <br>
   <% } %>
 <% } %>
 
-And the winner is: <%= @winner %>
+<br>
+
+<%= @statement %>
+ <% @winners.each{|winner| %>
+<%=  winner %>
+<%  } %>

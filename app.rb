@@ -30,11 +30,11 @@ class Poker < Sinatra::Base
     cards = session[:num_cards].to_i
     @dealer = Dealer.new
     @dealer.deal(players, cards)
-
-
     calculator = Calculator.new
-    @winner = calculator.find_winner(@dealer.record)
+    @winners = calculator.find_winner(@dealer.record)
+    @statement = calculator.winner_or_winners(@winners)
     erb(:dealing)
+
   end
 
 end
