@@ -78,4 +78,5 @@ $ rspec
 
 ## What I would do if I had more time
 
-- I would have the cards say King/Queen/Joker on the outcome page rather than 13, 12, 11. This didn’t feel totally necessary at this stage, because I think the user understands what is meant, but it would be nice to have.
+- I would have the cards say King/Queen/Joker on the outcome page rather than 13, 12, 11. This didn’t feel necessary at this stage for the game to function, but it would be nice to have, so that the deck looks normal when it's dealt. I would probably create a Format class, which would have a method that would go through the hashes, search for any values with the numbers 11, 12, 13 and replace them with the appropriate royal characters. I would also use this opportunity to extract the winner_or_winners method from the Calculator class into there, because that method is really to do with formatting, as well. 
+- I would have liked to have the players enter their names and then have the cards dealt to them by name, but as the number of players varied, at the time this seemed complicated. Now it seems simple! I would probably store the player names in an array, then iterate through each one and have my deal method work as normal, but replace players_counter with the player name. The while loop would continue until there are no more names left in the array. 
