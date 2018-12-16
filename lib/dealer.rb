@@ -57,7 +57,7 @@ class Dealer
   end
 
   # It deletes the card that was chosen from the deck, so that another player
-  # cannot be dealt that card. 
+  # cannot be dealt that card.
   def delete_card(card)
     @deck.delete(card)
   end

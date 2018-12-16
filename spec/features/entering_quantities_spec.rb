@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require './app'
-
 feature 'User adds quantities of people and cards for each person' do
   scenario 'User enters unworkable combination' do
     visit '/'

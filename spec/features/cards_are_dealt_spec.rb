@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require './app'
-
 feature 'User sees how the cards were dealt' do
   scenario 'Two players were entered and they see their hands' do
     visit '/'

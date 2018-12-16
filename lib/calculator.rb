@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-# The Calculator class calulates who's won and returns a single or plural
+# The Calculator class calculates who's won and returns a single or plural
 # statement containing the information.
 class Calculator
 
@@ -23,12 +23,12 @@ class Calculator
     @totals.each do |player, total_score|
       victors << player if total_score == @winning_score
     end
-    winner_or_winners(victors) #REFACTOR NAME
+    winner_or_winners(victors)
   end
 
   private
 
-  # This method goes through the record hash (returned by the dealer class) of
+  # This method goes through the record hash (returned by the Dealer class) of
   # all the players and their hands. It adds up the hands of each player and
   # returns the totals hash, which has each player and one score - their total
   # score.
@@ -37,7 +37,7 @@ class Calculator
       record_hash.each do |player, hand|
         player_total = 0
         hand.each do |card|
-          card.each do |_suit, number|
+          card.each do |suit, number|
             player_total += number
           end
         end
@@ -49,14 +49,14 @@ class Calculator
   # This method goes through the totals hash(returned by the adding_scores
   # method) and finds what the top score is.
   def find_top_score
-    first_winner_array = @totals.max_by do |_player, total_score|
+    first_winner_array = @totals.max_by do |player, total_score|
       total_score
     end
     @winning_score = first_winner_array[1]
   end
 
-  # This method returns a single or plural statement about who won, depending
-  # if it's a draw or not.
+  # This method returns a single or plural statement about who's won, depending
+  # on if it's a draw or not.
   def winner_or_winners(victors)
     if victors.length == 1
       'And the winner is: ' + victors.join

@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require './lib/calculator'
+require 'calculator'
 
 describe Calculator do
   let(:calculator) { described_class.new }

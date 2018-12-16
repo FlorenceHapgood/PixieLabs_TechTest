@@ -4,7 +4,6 @@ require 'sinatra/base'
 require 'sinatra/flash'
 require './lib/dealer'
 require './lib/calculator'
-require './controller_helper'
 
 # This is the Controller.
 class Poker < Sinatra::Base
@@ -15,16 +14,23 @@ class Poker < Sinatra::Base
     erb(:index)
   end
 
-# The error_message is stored in the controller_helper
+  # Creates an error message if the quantities are wrong.
   post '/save_quantities' do
-    error_message
+    if params[:num_players].to_i * params[:num_cards].to_i > 52
+      flash[:error] = "Those numbers don't work, please rethink your quantities"
+      redirect '/'
+    else
+      session[:num_players] = params[:num_players]
+      session[:num_cards] = params[:num_cards]
+      redirect '/dealing'
+    end
   end
 
   get '/dealing' do
     @dealer = Dealer.new
     @dealer.deal(session[:num_players], session[:num_cards])
 
-    # Passes the record of scores created from the dealer class
+    # Passes the record of scores created from the Dealer class
     # to the calculator class, to return a statement about
     # the winner(s).
     calculator = Calculator.new
