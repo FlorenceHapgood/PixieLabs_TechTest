@@ -38,6 +38,8 @@ class Poker < Sinatra::Base
     calculator = Calculator.new
     @statement = calculator.find_winners(@dealer.record)
 
+    # Pass the record to the formatter class to make the scores look nice:
+    # with Jack, Queen and King replacing 11, 12, 13
     formatter = Formatter.new
     @transformed_record = formatter.nums_to_characters(@dealer.record)
 

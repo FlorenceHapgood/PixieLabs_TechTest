@@ -38,6 +38,7 @@ A Poker Tech Test for Pixie Labs
 
 -	The Dealer class deals the cards.
 -	The Calculator class works out who’s won. It also prints out a single or plural statement depending on who’s won (winner_or_winners_method). This does feel like a violation of the Single Responsibility Principle, but it seemed excessive to create a new class just for this simple method.
+- The Formatter class formats the scores to look nice. 
 
 ### “Interesting” Decisions
 
