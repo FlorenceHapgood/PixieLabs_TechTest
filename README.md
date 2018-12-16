@@ -37,8 +37,8 @@ A Poker Tech Test for Pixie Labs
 ### Structure
 
 -	The Dealer class deals the cards.
--	The Calculator class works out who’s won. It also prints out a single or plural statement depending on who’s won (winner_or_winners_method). This does feel like a violation of the Single Responsibility Principle, but it seemed excessive to create a new class just for this simple method.
-- The Formatter class formats the scores to look nice. 
+-	The Calculator class works out who’s won. It also prints out a single or plural statement depending on who’s won (winner_or_winners_method). This does feel like a violation of the Single Responsibility Principle, but it seemed excessive to create a new class just for this simple method. I later added a Formatter class to deal with the issue below, and if I'd had more time I would consider refactoring winner_or_winners into there, as it's about formatting.
+- The Formatter class formats the scores record, to change 11, 12, 13 to Jack, Queen, King, in order to make the deck more "deck-like" for the user. 
 
 ### “Interesting” Decisions
 
