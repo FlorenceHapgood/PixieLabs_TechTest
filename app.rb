@@ -4,6 +4,7 @@ require 'sinatra/base'
 require 'sinatra/flash'
 require './lib/dealer'
 require './lib/calculator'
+require './lib/formatter'
 
 # This is the Controller.
 class Poker < Sinatra::Base
@@ -33,8 +34,13 @@ class Poker < Sinatra::Base
     # Passes the record of scores created from the Dealer class
     # to the calculator class, to return a statement about
     # the winner(s).
+
+
     calculator = Calculator.new
     @statement = calculator.find_winners(@dealer.record)
+    formatter = Formatter.new
+    @transformed_record = formatter.nums_to_characters(@dealer.record)
+
     erb(:dealing)
   end
 end

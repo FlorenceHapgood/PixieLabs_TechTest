@@ -1,7 +1,7 @@
-class Formater
+class Formatter
 
   def nums_to_characters(record)
-     record.map { |record_hash|
+     record.each { |record_hash|
        record_hash.each {| player, hand|
            hand.each {|card|
                replace(card)
@@ -13,7 +13,7 @@ class Formater
   end
 
   private
-  
+
   def replace(card)
     card.each {|suit, number|
       if number == 11
