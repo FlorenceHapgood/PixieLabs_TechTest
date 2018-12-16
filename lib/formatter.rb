@@ -8,7 +8,7 @@ class Formatter
   # calls to the replace to do the appropriate replacements.
   def nums_to_characters(record)
     record.each do |record_hash|
-      record_hash.each do |_player, hand|
+      record_hash.each do |player, hand|
         hand.each do |card|
           replace(card)
         end

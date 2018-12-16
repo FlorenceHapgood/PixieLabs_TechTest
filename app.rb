@@ -31,7 +31,7 @@ class Poker < Sinatra::Base
     @dealer = Dealer.new
     @dealer.deal(session[:num_players], session[:num_cards])
 
-    #  Passes the record of scores created from the Dealer class
+    # Passes the record of scores created from the Dealer class
     # to the calculator class, to return a statement about
     # the winner(s).
 

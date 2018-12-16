@@ -2,16 +2,16 @@
 (The card values are Jack = 11, Queen = 12, King = 13)
 <br>
 <br>
-<% @transformed_record.each { |record_hash| %>
-  <% record_hash.each {| player, hand| %>
+<% @transformed_record.each do |record_hash| %>
+  <% record_hash.each do | player, hand| %>
     <%= player %> :
-    <% hand.each {|card| %>
-      <%  card.each {|suit, number| %>
+    <% hand.each do |card| %>
+      <%  card.each do |suit, number| %>
       <%= number %> of <%= suit  %> ||
-      <% } %>
-    <%    } %> <br>
-  <% } %>
-<% } %>
+       <% end %>
+ <%    end %> <br>
+  <% end %>
+<% end %>
 
 <br>
 

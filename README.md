@@ -18,7 +18,7 @@ A Poker Tech Test for Pixie Labs
 
 - Ruby
 - RSpec
-- Capybara (for the feature tests)
+- Capybara for the feature tests
 - Sinatra as a web framework
 - Sinatra Flash for the error message
 - Simple_cov to measure test coverage
@@ -29,16 +29,16 @@ A Poker Tech Test for Pixie Labs
 
 ### Testing
 
-- I do have 100% test coverage, and had high test coverage throughout development, but while writing I prioritised testing a little less than I normally do. Normally I try and test everything, but in the Pixie Labs playbook there is the advice not to chase 100% test coverage (I also had a conversation with David from Pixie Labs questioning how useful TDD is) and I wanted to try out this approach and see what happened. I felt extremely rebellious and I liked it! It was very nice to be able to feel that I could put some tricky testing cases to one side and come back to them if I had time at the end.
+- I do have 100% test coverage, and had high test coverage throughout development, but while writing I prioritised testing a little less than I normally do. Normally I try and test everything, but in the Pixie Labs Playbook there is the advice not to chase 100% test coverage (I also had a conversation with David from Pixie Labs, questioning how useful TDD is) and I wanted to try out this approach and see what happened. I felt extremely rebellious and I liked it! It was very nice to be able to feel that I could put some tricky testing cases to one side and come back to them if I had time at the end.
 
-![screen shot 2018-12-16 at 15 16 53](https://user-images.githubusercontent.com/42243785/50055832-d6d57880-014b-11e9-9fc7-c7bdae26b516.png)
+![screen shot 2018-12-16 at 20 27 27](https://user-images.githubusercontent.com/42243785/50058503-19f61280-0171-11e9-8e6b-1cd54c22d6dc.png)
 
 
 ### Structure
 
 -	The Dealer class deals the cards.
 -	The Calculator class works out who’s won. It also prints out a single or plural statement depending on who’s won (winner_or_winners_method). This does feel like a violation of the Single Responsibility Principle, but it seemed excessive to create a new class just for this simple method. I later added a Formatter class to deal with the issue below, and if I'd had more time I would consider refactoring winner_or_winners into there, as it's about formatting.
-- The Formatter class formats the scores record, to change 11, 12, 13 to Jack, Queen, King, in order to make the deck more "deck-like" for the user. 
+- The Formatter class formats the scores record, to change 11, 12, 13 to Jack, Queen, King, in order to make the deck more "deck-like" for the user.
 
 ### “Interesting” Decisions
 
@@ -49,7 +49,7 @@ A Poker Tech Test for Pixie Labs
 
 ## How to run locally
 
--	Clone the repo
+-	Clone this repo
 ```
 $ bundle install
 $ rack_up
@@ -74,7 +74,7 @@ $ rspec
 
 ## What I learnt
 
-- I started off in the wrong direction and learnt a lot from it. In my last couple of weeks at Makers I had some feedback that I should try to plan less and let the classes evolve naturally as my code progressed. I definitely didn’t follow that advice well enough this time, and got tempted into doing a lot of planning before hand. My game-setup class turned out to be useless. I think I should have started with what I needed – a page asking the user to input values.  There was no point building a class that prints statements to the console and then asks for user_input, I had overthought it too much.
+- I started off in the wrong direction and learnt a lot from it. In my last couple of weeks at Makers, I had some feedback that I should try to plan less and let the classes evolve naturally as my code progressed. I definitely didn’t follow that advice well enough this time, and got tempted into doing a lot of planning before hand. My game-setup class turned out to be useless. I think I should have started with what I needed – a page asking the user to input values.  There was no point building a class that prints statements to the console and then asks for user_input, I had overthought it too much.
 
 
 ## What I would do if I had more time

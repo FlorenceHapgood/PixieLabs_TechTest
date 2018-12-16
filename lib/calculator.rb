@@ -36,7 +36,7 @@ class Calculator
       record_hash.each do |player, hand|
         player_total = 0
         hand.each do |card|
-          card.each do |_suit, number|
+          card.each do |suit, number|
             player_total += number
           end
         end
@@ -48,7 +48,7 @@ class Calculator
   # This method goes through the totals hash(returned by the adding_scores
   # method) and finds what the top score is.
   def find_top_score
-    first_winner_array = @totals.max_by do |_player, total_score|
+    first_winner_array = @totals.max_by do |player, total_score|
       total_score
     end
     @winning_score = first_winner_array[1]
