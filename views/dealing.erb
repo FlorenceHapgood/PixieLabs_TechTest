@@ -1,8 +1,8 @@
 <h1> Outcome </h1>
-(The card values are 11 = Jack, 12 = Queen, 13 = King)
+(The card values are Jack = 11, Queen = 12, King = 13)
 <br>
 <br>
-<% @dealer.record.each { |record_hash| %>
+<% @transformed_record.each { |record_hash| %>
   <% record_hash.each {| player, hand| %>
     <%= player %> :
     <% hand.each {|card| %>

@@ -38,6 +38,7 @@ class Poker < Sinatra::Base
 
     calculator = Calculator.new
     @statement = calculator.find_winners(@dealer.record)
+    
     formatter = Formatter.new
     @transformed_record = formatter.nums_to_characters(@dealer.record)
 

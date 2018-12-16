@@ -7,7 +7,7 @@ feature 'User sees how the cards were dealt' do
     fill_in :num_cards, with: '2'
     srand(100)
     click_button 'Submit'
-    expect(page).to have_content("Outcome\n(The card values are 11 = Jack, 12 = Queen, 13 = King) Player number 1 : King of Hearts || Queen of Clubs || Player number 2 : 10 of Clubs || Queen of Spades || Player number 3 : 10 of Spades || King of Diamonds || And the winner is: Player number 1")
+    expect(page).to have_content("Outcome\n(The card values are Jack = 11, Queen = 12, King = 13) Player number 1 : King of Hearts || Queen of Clubs || Player number 2 : 10 of Clubs || Queen of Spades || Player number 3 : 10 of Spades || King of Diamonds || And the winner is: Player number 1")
     expect(page).not_to have_content('Player number 100')
   end
 
