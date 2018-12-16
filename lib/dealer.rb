@@ -4,8 +4,8 @@
 class Dealer
   attr_reader :record
 
-# The record array is ready to store all the players and their hands. The hand
-# array is to temporarily store each player's hand.
+  # The record array is ready to store all the players and their hands. The hand
+  # array is to temporarily store each player's hand.
   def initialize
     @deck = [{ Hearts: 1 }, { Diamonds: 1 }, { Spades: 1 }, { Clubs: 1 },
              { Hearts: 2 }, { Diamonds: 2 }, { Spades: 2 }, { Clubs: 2 },
@@ -35,7 +35,7 @@ class Dealer
       @hand = []
       num_cards.to_i.times { get_card }
       # Now that the player has an array with their hand of cards, this is
-      #stored, along with their name, as a hash into the record array.
+      # stored, along with their name, as a hash into the record array.
       @record << { :"Player number #{ players_counter + 1 }" => @hand }
       players_counter += 1
     end
